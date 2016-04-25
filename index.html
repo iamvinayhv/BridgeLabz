@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset = "utf-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+      <link rel="stylesheet" href="css/styleB.css">
+      <title>BridgeLabz.com</title>
+
+  </head>
+
+  <body ng-app="bridgeApp">
+  <div >
+    <!--&lt;!&ndash;Navbar&ndash;&gt;-->
+    <!--<div ng-include="'pages/Navbar.html'"></div>-->
+    <!--View Area-->
+    <div class="container-fluid">
+      <div ui-view name="content"></div>
+    </div>
+  <!--Footer-->
+    <div ng-include="'pages/footer.html'"></div>
+ </div>
+  </body>
+  <!-- Application Dependencies -->
+  <script src="bower_components/angular/angular.js"></script>
+  <!--<script src="bower_components/jquery/dist/jquery.js"></script>-->
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <!--<script src="bower_components/satellizer/satellizer.js"></script>-->
+  <script src="bower_components/underscore/underscore.js"></script>
+  <script src="bower_components/angular-underscore/angular-underscore.js"></script>
+  <script src="bower_components/cr-bootstrap-navbar/src/cr-bootstrap-navbar.js"></script>
+  <script src="app.js"></script>
+
+</html>
