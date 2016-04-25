@@ -70,6 +70,17 @@ angular.module('bridgeApp', ['ui.router'])
                 }
             }
         })
+            .state('Register', {
+                url: '/Register',
+                views: {
+                    nav: {
+                        templateUrl: 'pages/Navbar.html'
+                    },
+                    content: {
+                        templateUrl: 'pages/Register.html'
+                    }
+                }
+            })
 
     });
 
