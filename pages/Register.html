@@ -1,39 +1,41 @@
-<!--Navbar-->
-<div ng-include="'pages/Navbar.html'"></div>
-<div class = "register">
-<div class = "col-md-7 center" style="background-color: #000000;
-        color: #FFFFFF;background: rgba(0, 0, 0, 0.3);" id = "reg">
-    <form class="form-Reg">
-        <center>
-            <div class="SignUp">
-                <h2 class="form-reg-heading">Sign Up</h2>
+<div class="register">
+    <div class="col-md-7 center" style="background-color: #000000;
+        color: #FFFFFF;background: rgba(0, 0, 0, 0.3);" id="reg">
+        <form class="form-Reg">
+            <center>
+                <div class="SignUp">
+                    <h2 class="form-reg-heading">Sign Up</h2>
+                    <div>
+                        <input type="text" ng-model="user" id="inputName" class="form-control" placeholder="Username"
+                               required><br>
+                    </div>
+                    <div>
+                        <input type="email" name="email" ng-model="email" id="inputEmail" class="form-control"
+                               placeholder="Email address" required><br>
 
-                <input type="text" id="inputName" class="form-control" placeholder="User Name"><br>
+                    </div>
+                    <div>
+                        <input type="email" id="inputEmail" ng-model="email" class="form-control"
+                               placeholder="Re-enter Email address" required><br>
+                    </div>
+                    <div>
+                        <input type="password" id="inputPassword" ng-model="password" class="form-control"
+                               placeholder="Password" required> <br>
+                    </div>
+                    <div class="radio">
+                        <label class="control-label radio-inline">
+                            <input type="radio" id="radM" name="optradio">Male</label>
+                        <label class="control-label radio-inline">
+                            <input type="radio" id="radF" name="optradio">Female</label>
+                    </div>
+                    <br>
 
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address"><br>
 
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address"><br>
-
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password"><br>
-
-                <div class="radio">
-                    <label class="control-label radio-inline">
-                        <input type="radio" id="radM" name="optradio">Male</label>
-                    <label class="control-label radio-inline">
-                        <input type="radio" id="radF" name="optradio">Female</label>
-                </div><br>
-
-                  <!-- <label class = "pull-right">
-                    <a href="#"><u><small>Forgot Password</small></u></a>
-                  </label> -->
-
-                <button class="btn btn-lg btn-success btn-block" type="submit" id = "btn1">Submit</button>
-            </div>
-        </center>
-    </form>
+                    <button class="btn btn-lg btn-success btn-block" type="submit" id="btn1">Submit</button>
+                </div>
+            </center>
+        </form>
+    </div>
 </div>
-</div>
-<!--Footer-->
-<!--<div ng-include="'pages/footer.html'"></div>-->
 
 

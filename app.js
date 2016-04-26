@@ -12,6 +12,9 @@ angular.module('bridgeApp', ['ui.router'])
                 },
                 content: {
                     templateUrl: 'pages/Home.html'
+                },
+                footer:{
+                    templateUrl: 'pages/footer.html'
                 }
             }
         })
@@ -23,6 +26,9 @@ angular.module('bridgeApp', ['ui.router'])
                 },
                 content: {
                     templateUrl: 'pages/AboutUs.html'
+                },
+                footer:{
+                    templateUrl: 'pages/footer.html'
                 }
             }
         })
@@ -34,6 +40,9 @@ angular.module('bridgeApp', ['ui.router'])
                 },
                 content: {
                     templateUrl: 'pages/OurJob.html'
+                },
+                footer:{
+                    templateUrl: 'pages/footer.html'
                 }
             }
         })
@@ -45,8 +54,13 @@ angular.module('bridgeApp', ['ui.router'])
                 },
                 content: {
                     templateUrl: 'pages/JoinUs.html'
+                },
+                footer:{
+                    templateUrl: 'pages/footer.html'
                 }
-            }
+
+            },
+                controller : 'resumeController'
         })
         .state('Contact', {
             url: '/Contact',
@@ -56,6 +70,9 @@ angular.module('bridgeApp', ['ui.router'])
                 },
                 content: {
                     templateUrl: 'pages/Contact.html'
+                },
+                footer:{
+                    templateUrl: 'pages/footer.html'
                 }
             }
         })
@@ -67,6 +84,9 @@ angular.module('bridgeApp', ['ui.router'])
                 },
                 content: {
                     templateUrl: 'pages/Login.html'
+                },
+                footer:{
+                    templateUrl: 'pages/footer.html'
                 }
             }
         })
@@ -78,6 +98,9 @@ angular.module('bridgeApp', ['ui.router'])
                     },
                     content: {
                         templateUrl: 'pages/Register.html'
+                    },
+                    footer:{
+                        templateUrl: 'pages/footer.html'
                     }
                 }
             })
