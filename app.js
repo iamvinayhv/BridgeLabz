@@ -1,7 +1,7 @@
 angular.module('bridgeApp', ['ui.router'])
     .config(function ($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('/Home');
+    // $urlRouterProvider.otherwise('/Home');
 
         $stateProvider
         .state('Home', {
