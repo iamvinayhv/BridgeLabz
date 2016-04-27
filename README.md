@@ -1,4 +1,4 @@
 # ProjectBridgeLabz
 
-- BridgeLabz website using AngularJS.
+BridgeLabz website using AngularJS.
 

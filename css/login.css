@@ -7,10 +7,11 @@
 
 #logg {
     width: 400px;
-    height: 350px;
+    height: 450px;
     margin-left: 450px;
     margin-top: 150px;
     font-family: cursive;
+    padding-top: 15px;
 }
 
 #btn1, #btn2 {

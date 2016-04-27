@@ -17,14 +17,6 @@ p {
     color: black;
 }
 
-input.ng-invalid {
-    background-color: pink;
-}
-
-input.ng-valid {
-    background-color: white;
-}
-
 .nav {
     /*border:1px solid #ccc;
     border-width:1px 0;*/

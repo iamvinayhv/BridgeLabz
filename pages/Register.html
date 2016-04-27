@@ -1,27 +1,43 @@
 <div class="register">
     <div class="col-md-7 center" style="background-color: #000000;
         color: #FFFFFF;background: rgba(0, 0, 0, 0.3);" id="reg">
-        <form class="form-Reg">
+        <form name="reg">
             <center>
                 <div class="SignUp">
                     <h2 class="form-reg-heading">Sign Up</h2>
-                    <div>
-                        <input type="text" ng-model="user" id="inputName" class="form-control" placeholder="Username"
-                               required><br>
-                    </div>
-                    <div>
-                        <input type="email" name="email" ng-model="email" id="inputEmail" class="form-control"
-                               placeholder="Email address" required><br>
 
+                    <!--Username-->
+                    <div class="form-group" ng-class="{ 'has-error' : reg.user.$invalid }">
+                        <input type="text" ng-model="user" name="user" id="inputName" class="form-control" placeholder="Username"
+                               required><br>
+                        <p ng-show="reg.user.$invalid" class="help-block">Username is not valid!!</p>
                     </div>
-                    <div>
-                        <input type="email" id="inputEmail" ng-model="email" class="form-control"
+
+                    <!--Email-->
+                    <div class="form-group" ng-class="{ 'has-error' : reg.email.$invalid }">
+                        <input type="email" name="email" ng-model="email" id="inputEmail1" class="form-control"
+                               placeholder="Email address" required><br>
+                        <p ng-show="reg.email.$invalid" class="help-block">Email is not valid!!</p>
+                    </div>
+
+                    <!--Re-enter email-->
+                    <div class="form-group" ng-class="{ 'has-error' : reg.email.$invalid }">
+                        <input type="email" id="inputEmail2" ng-model="email" class="form-control"
                                placeholder="Re-enter Email address" required><br>
+                        <p ng-show="reg.email.$invalid" class="help-block">Email is not valid!!</p>
                     </div>
-                    <div>
-                        <input type="password" id="inputPassword" ng-model="password" class="form-control"
-                               placeholder="Password" required> <br>
+
+                    <!--Password-->
+                    <div class="form-group" ng-class="{ 'has-error' : reg.password.$invalid }">
+                        <input type="password" id="inputPassword" name="password" ng-model="password" class="form-control"
+                               placeholder="Password" ng-minlength="8" required> <br>
+                        <p ng-show="reg.password.$invalid" class="help-block">Password is weak!!</p>
+                        <p ng-show="reg.password.$valid" class="help-block" style="color: green">
+                            <span class="glyphicon glyphicon-ok"></span>
+                        </p>
                     </div>
+
+
                     <div class="radio">
                         <label class="control-label radio-inline">
                             <input type="radio" id="radM" name="optradio">Male</label>
@@ -31,7 +47,9 @@
                     <br>
 
 
-                    <button class="btn btn-lg btn-success btn-block" type="submit" id="btn1">Submit</button>
+                    <button class="btn btn-lg btn-success btn-block" type="submit" id="btn1" ng-disabled="reg.$invalid">
+                        Submit
+                    </button>
                 </div>
             </center>
         </form>

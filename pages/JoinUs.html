@@ -9,42 +9,36 @@
     <div class="row">
         <div class="formAnim col-6" id="formAnim" ng-hide="hideForm">
             <div class="join">
+                <form name="browse">
 
-
-                <form name="browse" ng-app>
-                    <div class="form-group" id="name">
-                        <input type="text" class="form-control" placeholder="Enter your Name" ng-model="Name" required
-                               autofocus>
-                        <span class="help-inline" ng-show="submitted && form.Name.$error.required">Required</span>
+                    <div class="form-group" id="name" ng-class="{ 'has-error' : browse.Name.$invalid }">
+                        <input type="text" name="Name" class="form-control" placeholder="Enter your Name" ng-model="Name"
+                               required>
+                        <p ng-show="browse.Name.$invalid " class="help-block">Name Required!</p>
                     </div>
-                    <div class="form-group">
+
+                    <div class="form-group" ng-class="{ 'has-error' : browse.resume.$invalid }">
                         <p>
                             <label class="pull-left">Upload your Resume:</label><br>
-                            <input id="browse" type="file" name="datafile" size="40" style="color:#f00; background:#ccc"
-                                   ng-model="resume" required>
+                            <input id="browse" type="file" name="resume" style="color:black; background:#ccc"
+                                   ng-model="resume"/>
                         </p>
-                        <div>
-                            <!-- <label class="btn btn-primary" for="my-file-selector">
-                            <input id="my-file-selector" class = "form-control" type="file" style="display:none;">
-                            Browse
-                          </label> -->
-                        </div>
-                        <div class="form-group" id="msg">
-                            <br>
-                    <textarea class="form-control" placeholder="Messege">
-                    </textarea>
-
-                        </div>
-                        <div class="form-group" id="submit">
-                            <button type="button" ng-click="ani()" class="flush">
-                                <img src="images/send.png" id="send1">
-                            </button>
-
-                        </div>
-
                     </div>
+
+                    <div class="form-group">
+                        <br>
+                        <textarea name="message"  class="form-control"></textarea>
+                    </div>
+
+                    <div class="form-group" id="submit">
+                        <button type="button" ng-click="ani()" ng-disabled="browse.$invalid" class="flush">
+                            <img src="images/send.png" id="send1">
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
+
         <div class="AnimClick col-6" id="AnimClick">
         </div>
 
