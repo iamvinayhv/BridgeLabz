@@ -14,7 +14,7 @@
     padding-top: 15px;
 }
 
-#btn1, #btn2 {
+#btn1, #btn2{
     display: inline-block;
     background-color: rgba(0, 0, 0, 0.3);
     border-color: forestgreen;
@@ -31,6 +31,14 @@
     transition-property: color;
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
+}
+#btn3{
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-color: dodgerblue;
+    border-width: 2px;
+    vertical-align: middle;
+
 }
 
 #btn2 {

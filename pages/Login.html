@@ -1,5 +1,5 @@
-<div id="log_in" style="padding:0px;">
-    <div ng-app="bridgeApp" class="col-md-7 center" style="background-color: #000000;
+<div id="log_in" style="padding:0px;" ng-app="bridgeApp" ng-controller="loginController as lg">
+    <div class="col-md-7 center" style="background-color: #000000;
         color: #FFFFFF;background: rgba(0, 0, 0, 0.3);" id="logg">
         <form name="signin">
             <center>
@@ -34,6 +34,11 @@
                     <button class="btn btn-lg btn-primary btn-block" ui-sref="Register" id="btn2">
                         Sign Up
                     </button>
+                    <div class="linkedin">
+                        <button class="btn btn-lg btn-primary btn-block" id="btn3" ng-click="authenticate('linkedin')">
+                            <i class="ion-social-linkedin"></i> Sign in with LinkedIn
+                        </button>
+                    </div>
                 </div>
             </center>
         </form>

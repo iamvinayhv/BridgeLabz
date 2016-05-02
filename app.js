@@ -1,8 +1,8 @@
-angular.module('bridgeApp', ['ui.router'])
-    .config(function ($stateProvider, $urlRouterProvider) {
+angular.module('bridgeApp', ['ui.router','satellizer'])
+    .config(function ($stateProvider, $urlRouterProvider, $authProvider) {
 
-    // $urlRouterProvider.otherwise('/Home');
-
+    $urlRouterProvider.otherwise('/Home');
+        // $authProvider.loginUrl = 'http://localhost/bridgelabz';
         $stateProvider
         .state('Home', {
             url: '/Home',
@@ -85,25 +85,53 @@ angular.module('bridgeApp', ['ui.router'])
                 content: {
                     templateUrl: 'pages/Login.html'
                 },
+                footer: {
+                    templateUrl: 'pages/footer.html'
+                }
+            }
+        })
+        .state('Register', {
+            url: '/Register',
+            views: {
+                nav: {
+                    templateUrl: 'pages/Navbar.html'
+                },
+                content: {
+                    templateUrl: 'pages/Register.html'
+                },
                 footer:{
                     templateUrl: 'pages/footer.html'
                 }
             }
         })
-            .state('Register', {
-                url: '/Register',
-                views: {
-                    nav: {
-                        templateUrl: 'pages/Navbar.html'
-                    },
-                    content: {
-                        templateUrl: 'pages/Register.html'
-                    },
-                    footer:{
-                        templateUrl: 'pages/footer.html'
-                    }
+        .state('callback', {
+            url: '/callback',
+            views: {
+                nav: {
+                    templateUrl: 'pages/Navbar.html'
+                },
+                content: {
+                    templateUrl: 'pages/callback.html'
+                },
+                footer:{
+                    templateUrl: 'pages/footer.html'
                 }
-            })
+            }
+        });
+        $authProvider.linkedin({
+            url: 'http://localhost/bridgelabz/#/Home',
+            clientId: '75bf56ze65qo89',
+            redirectUri: 'https://localhost/bridgelabz/linkedin/callback'
+        });
+        // $authProvider.oauth2({
+        //     name: 'linkedin',
+        //     url: '/auth/linkedin',
+        //     clientId: '75bf56ze65qo89',
+        //     redirectUri: 'https://localhost/bridgelabz/linkedin/callback',
+        //     authorizationEndpoint: 'https://www.linkedin.com/uas/oauth2/authorization'
+        // });
+
+
 
     });
 
